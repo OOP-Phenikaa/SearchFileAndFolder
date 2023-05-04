@@ -9,8 +9,10 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.text.SimpleDateFormat;
 
@@ -65,6 +67,12 @@ public class ClassTableView extends FileExplorerFx {
 
     @Override
     public void CreateTiles() { }
+
+    @Override
+    public Image toFXImage(BufferedImage bimg, Object o) {
+        return null;
+    }
+
     @Override
     public TreeItem<String>[] TreeCreate(File dir) {return null;}
     @Override

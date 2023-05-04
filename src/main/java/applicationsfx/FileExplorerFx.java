@@ -36,12 +36,31 @@ public abstract class FileExplorerFx implements FileExplorer{
     FileExplorerFx(){}
     public Image getIconImageFX(File f){
 
+//        ImageIcon icon = (ImageIcon) FileSystemView.getFileSystemView().getSystemIcon(f);
+//        java.awt.Image img = icon.getImage();
+//        BufferedImage bimg = (BufferedImage) img;
+//        Image imgfx = toFXImage(bimg,null);
+//        return imgfx;
+        if (!f.exists()) {
+            return null;
+        }
         ImageIcon icon = (ImageIcon) FileSystemView.getFileSystemView().getSystemIcon(f);
+        if (icon == null) {
+            return null;
+        }
         java.awt.Image img = icon.getImage();
         BufferedImage bimg = (BufferedImage) img;
-        Image imgfx = toFXImage(bimg,null);
-        return imgfx;
+        try {
+            Image imgfx = toFXImage(bimg, null);
+            return imgfx;
+        } catch (NullPointerException e) {
+            return null;
+        }
     }
+
+
+
+
     public void setLabelTxt(){lbl.setText(CurrDirStr);}
     public String calculateSize(File f){
         String s;long sizeInByte=0; Path path;

@@ -14,6 +14,7 @@ import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
 
 import java.awt.Desktop;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
@@ -73,6 +74,11 @@ public class ClassTilesView extends FileExplorerFx{
             tilePane.getChildren().add(vbox);
         }
 
+    }
+
+    @Override
+    public Image toFXImage(BufferedImage bimg, Object o) {
+        return null;
     }
 
     @Override

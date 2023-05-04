@@ -7,6 +7,7 @@ import javafx.scene.control.TreeView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 
 /**
@@ -14,6 +15,11 @@ import java.io.File;
  */
 public class ClassTreeView extends FileExplorerFx {
     ClassTreeView(){};
+
+    @Override
+    public Image toFXImage(BufferedImage bimg, Object o) {
+        return null;
+    }
 
     @Override
     public TreeItem<String>[] TreeCreate(File dir){

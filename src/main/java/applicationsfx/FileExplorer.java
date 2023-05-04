@@ -7,10 +7,12 @@ import javafx.scene.control.TreeView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 
 public interface FileExplorer {
     Image getIconImageFX(File f);
+    Image toFXImage(BufferedImage bimg, Object o);
     TreeItem<String>[] TreeCreate(File dir);
     String calculateSize(File f);
     String FindAbsolutePath(TreeItem<String> item, String s);
