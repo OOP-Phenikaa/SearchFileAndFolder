@@ -28,6 +28,7 @@ public class FileInfo {
         this.name = new SimpleStringProperty(name);
         this.size = new SimpleStringProperty(size);
         this.date = new SimpleStringProperty(date);
+
     }
 
     //public Integer getId(){ return id.get(); }

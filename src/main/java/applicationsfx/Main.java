@@ -14,6 +14,7 @@ public class Main extends Application {
         primaryStage.setTitle("File Explorer");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+
     }
 
     public static void main(String[] args) {
